@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Categories | By Shahzaib Tech</title>
+    <style>
+        /* Google Fonts for better typography */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #fff0f5; /* Lavender Blush Background */
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(135deg, #ff69b4, #ff1493);
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .branding {
+            font-size: 1rem;
+            font-weight: 300;
+            background: rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png'), linear-gradient(to right, #ffe4e1, #ffb6c1);
+            border-bottom: 3px solid #ff69b4;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            color: #c71585; /* Medium Violet Red */
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Categories Section */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 3rem auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #ff1493;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background-color: #ff69b4;
+            display: block;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Grid System for Flowers */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        /* Flower Cards */
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(255, 182, 193, 0.4);
+            transition: all 0.3s ease-in-out;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: #ff69b4;
+            box-shadow: 0 15px 25px rgba(255, 105, 180, 0.5);
+        }
+
+        .flower-icon {
+            font-size: 4.5rem;
+            margin-bottom: 15px;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .flower-icon {
+            transform: scale(1.1);
+        }
+
+        .card h3 {
+            color: #d11a2a;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .explore-btn {
+            background-color: #ffb6c1;
+            color: #c71585;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .card:hover .explore-btn {
+            background-color: #ff1493;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #c71585;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #ffb6c1;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Floral Paradise</h1>
+        <div class="branding">Designed & Developed by <strong>Shahzaib Tech</strong></div>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome to the World of Colors</h2>
+        <p>Apne pasandeeda phoolon ki categories explore karein. Shahzaib Tech laya hai aapke liye behtareen aur khubsurat flowers ka collection.</p>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">Explore Categories</h2>
+        
+        <div class="grid">
+            <div class="card">
+                <div class="flower-icon">🌹</div>
+                <h3>Romantic Roses</h3>
+                <p>Laal, gulabi aur safed gulab. Har khass mauqe ke liye behtareen intikhab.</p>
+                <button class="explore-btn">View Collection</button>
+            </div>
+
+            <div class="card">
+                <div class="flower-icon">🌷</div>
+                <h3>Elegant Tulips</h3>
+                <p>Khoobsurat aur dilkash tulips jo aapke din ko roshan kar dein.</p>
+                <button class="explore-btn">View Collection</button>
+            </div>
+
+            <div class="card">
+                <div class="flower-icon">🌻</div>
+                <h3>Bright Sunflowers</h3>
+                <p>Khushi aur umeed ka paigham. Apne pyaron ke chehre par muskurahat layein.</p>
+                <button class="explore-btn">View Collection</button>
+            </div>
+
+            <div class="card">
+                <div class="flower-icon">🌸</div>
+                <h3>Exotic Orchids</h3>
+                <p>Premium aur nayab orchids ka majmua, khas tohfon ke liye.</p>
+                <button class="explore-btn">View Collection</button>
+            </div>
+            
+            <div class="card">
+                <div class="flower-icon">🌼</div>
+                <h3>Fresh Daisies</h3>
+                <p>Sadgi aur khubsurti ka behtareen combination. Rozana ki sajawat ke liye.</p>
+                <button class="explore-btn">View Collection</button>
+            </div>
+
+            <div class="card">
+                <div class="flower-icon">🌺</div>
+                <h3>Tropical Lilies</h3>
+                <p>Khushbudar aur baray phool jo kisi bhi kamre ki ronaq barha dein.</p>
+                <button class="explore-btn">View Collection</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 All Rights Reserved | Powered by <a href="#">Shahzaib Tech</a></p>
+    </footer>
+
+</body>
+</html>
